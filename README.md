@@ -8,4 +8,4 @@ Road-map:
 - [ ] Dockerize it
 - [ ] Integrate API keys / host the API for use
 
-[Mistforge](https://mistforge.net/en-US/news) was a great inspiration for the project. I also just really enjoy the game and am happy it's come back to us.
+[Mistforge](https://mistforge.net/en-US/news) was a big inspiration for the project. I also just really enjoy the game and am happy it's come back to us.
