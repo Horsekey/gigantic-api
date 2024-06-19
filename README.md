@@ -8,4 +8,210 @@ Road-map:
 - [ ] Dockerize it
 - [ ] Integrate API keys / host the API for use
 
-[Mistforge](https://mistforge.net/en-US/news) was a big inspiration for the project. I also just really enjoy the game and am happy it's come back to us.
+[Mistforge](https://mistforge.net/en-US/news) was a big inspiration for the project. I also just really enjoy the game and am happy it's come back to us. This API won't include any in-game stats (yet) and will just focus on static content found within the game client and the [gogigantic.wiki](https://gogigantic.wiki) page.
+
+## Full JSON Structure
+<details>
+<summary><i>Expand</i></summary>
+
+heroes[#]
+- .id 
+- .name 
+- .title 
+- .description 
+- .role 
+- .archetype 
+- .statsPercentages 
+- .abilities
+	- .lmb
+		- .skillInfo
+			- .name 
+			- .description 
+			- .damage 
+			- .effect
+			- .range
+			- .damageType
+			- .cooldown
+		- .upgrades
+			- .right
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+			- left
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+	- .rmb
+		- .skillInfo
+			- .name 
+			- .description 
+			- .damage 
+			- .effect
+			- .range
+			- .damageType
+			- .cooldown
+		- .upgrades
+			- .right
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+			- left
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+	- .q
+		- .skillInfo
+			- .name 
+			- .description 
+			- .damage 
+			- .effect
+			- .range
+			- .damageType
+			- .cooldown
+		- .upgrades
+			- .right
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+			- left
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+	- .e
+		- .skillInfo
+			- .name 
+			- .description 
+			- .damage 
+			- .effect
+			- .range
+			- .damageType
+			- .cooldown
+		- .upgrades
+			- .right
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+			- left
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+	- .focus
+		- .skillInfo
+			- .name
+			- .description
+			- .damage
+			- .effect
+			- .range
+			- .damageType
+			- .cooldown
+		- .upgrades
+			- .right
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+			- .left
+				- .t1
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+				- .t2
+					- .name
+					- .description
+					- .damage
+					- .effect
+					- .range
+	- .talents
+		- .name
+		- .ability
+		- .description
+		- .clash
+		- .effect
+		- .range
+</details>
+
+## Documentation
+
+Thinking of using ReDoc... tbd...
