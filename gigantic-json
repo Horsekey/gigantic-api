@@ -1,0 +1,824 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Aisling",
+      "title": "Young Warrior",
+      "description": "By taking up her father's sword, Aisling conjured more than just his memory",
+      "role": ["Support", "Melee DPS"],
+      "archetype": ["Summoner", "Utility"],
+      "statPercentages":
+        {
+        "Offense": 12,
+        "Defense": 12,
+        "Mobility":12,
+        "Utility": 12
+        },
+      "abilities":{
+          "lmb": {
+            "skillInfo":[
+              {
+              "name": "Slash",
+              "description": "Melee attack combo, 3 hits.",
+              "damage": 112,
+              "effect": null,
+              "range": null,
+              "damageType": "Melee",
+              "cooldown": null
+              },
+              {
+              "name": "Sir Cador",
+              "description": "Fights alongside Aisling. Deals +200% damage to SLASH victims.",
+              "damage": 40,
+              "effect": "+200% damage",
+              "range": null,
+              "damageType": "Melee",
+              "cooldown": null
+              }
+           ],
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Spectral Wave", "description": "Shoots a piercing projectile instead of melee attack.", "damage": 80, "effect": "Ranged attack", "range": 10},
+                  "t2": [
+                    {"name":"Spectral Might", "description": "On ally hit, gives +15% damage to that ally for 5s.", "damage": 0, "effect":"+15% damage to SIR CADOR victims", "range": 10}, 
+                    {"name":"Spectral Defense", "description": "On ally hit, gives +20 armor of ally for 5s.", "damage": 0, "effect":"+20 armor", "range": 10}
+                  ]
+                },
+                "left":{
+                "t1": {"name":"Father's Lessons", "description": "Deals +25% damage to SIR CADOR's victims.", "damage": 0, "effect": "+25% damage", "range": 0},
+                "t2": [
+                  {"name":"Father's Flame", "description": "Deals +60 damage on burning enimies.", "damage": 0, "effect":"+60 damage", "range": 0}, 
+                  {"name":"Father's Reproof", "description": "Each hit weakens enemines, -5% damage for 3s. Stacks 5x, up to -25% damage.", "damage": 0, "effect":"-5% damage", "range":10}
+                ]
+              }
+            }
+          },
+          "rmb": {
+            "skillInfo":[
+              {
+              "name": "Cador's Commands",
+              "description": "Summons SIR CADOR or while summoned, directs him to target area or enemy. With SIR CADOR in sword, gains +10 armor.",
+              "damage": 0,
+              "effect": "",
+              "range": 10,
+              "damageType": "Melee",
+              "cooldown": 2
+              },
+              {
+              "name": "Sir Cador",
+              "description": "Fights alongside Aisling. On death, enters sword and stuns you for 1s (interrupts).",
+              "damage": 40,
+              "effect": "On death, enters sword and stuns for 1s (interrupts)",
+              "range": 0,
+              "damageType": "Melee",
+              "cooldown": 0
+              }
+           ],
+
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Cador's Defenses", "description": "Gives +10 armor to allies and Aisling within 5m.", "damage": 0, "effect":"+10 armor", "range": 5},
+                  "t2": [
+                    {"name":"Cador's Might", "description": "Gives +10 armor and +15% damage to allies and Aisling within 5m.", "damage": 0, "effect":"+10 armor and +15% damage", "range": 5}, 
+                    {"name":"Cador's Restoration", "description": "Heals allies and Aisling within 5m, +35 HP/s.", "damage": 0, "effect":"+35 HP/s", "range": 5}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Cador's Charge", "description": "Every 9s, deals +50% damage with next attack.", "damage": 0, "effect":"+50% damage next attack (every 9s)", "range": 0},
+                "t2": [
+                  {"name":"Fast Recharge", "description": "Every 3s, deals +50% damage with next attack.", "damage": 0, "effect":"+50% damage next attack (every 3s)", "range": 0}, 
+                  {"name":"Burning Blade", "description": "Every 9s, deals +50% damage and applies burning with next attakc, 40 dmg/s for 3s", "damage": 0, "effect":"+50% damage next attack (9s) and burning 40 dmg/s for 3s", "range": 0}
+                ]
+              }
+            }
+          },
+          "q": {
+            "skillInfo":[
+              {
+              "name": "Cador's War Cry",
+              "description": "Activates SIR CADOR's ability.",
+              "damage": 0,
+              "effect": "",
+              "range": 4,
+              "damageType": "",
+              "cooldown": 14
+              },
+              {
+              "name": "Sir Cador",
+              "description": "Sir Cador roars, 3.5m radius",
+              "damage": 0,
+              "effect": "-40% move speed for 2s and cancels enemies (interrupts)",
+              "range": 3.5,
+              "damageType": "",
+              "cooldown": 14
+              }
+           ],
+
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Spectral Barrier", "description": "Blocks enemy projectiles for 2s", "damage": 0, "effect":"Blocks projectiles", "range": 0},
+                  "t2": [
+                    {"name":"Spectral Armor", "description": "Gives +20 armor to allies for 2s", "damage": 0, "effect":"+20 armor for 2s", "range": 0},
+                    {"name":"Spectral Lens", "description": "Gives +100% crit chance to allies and Aisling for 2s", "damage": 0, "effect":"+100% crit for 2s", "range": 0}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Chastise", "description": "On cancel, cripples enemy, -40% move speed for 3s", "damage": 0, "effect":"-40% move speed for 3s", "range": 0},
+                "t2": [
+                  {"name":"Intimidation", "description": "On cancel, cripples and major weakness enemines, -40% move speed and -50% damage for 3s", "damage": 0, "effect":"-40% move speed and -50% damage 3s", "range": 0}, 
+                  {"name":"Cry More", "description": "On cancel, reduces cooldown by 6s", "damage": 0, "effect":"On cancel, reduces cooldown by 6s", "range": 0}
+                ]
+              }
+            }
+          },
+          "e": {
+            "skillInfo":
+              {
+              "name": "Into The Blade",
+              "description": "Retreats SIR CADOR into the sword. Healths self, +100 HP. On retreat, gains +10 armor till summoned again. On retreat, puts CADOR's COMMAND's and CADOR's WAR CRY's on cooldown based on SIR CADOR's health, ranges from 8s to 14s",
+              "damage": 0,
+              "effect": "+100 HP and +10 armor until summoned again 8s to 14s cooldown on CADOR's COMMAND's and CADOR's WAR CRY's",
+              "range": 0,
+              "damageType": "",
+              "cooldown": 16
+              },
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Shielding Presence", "description": "Restores +250 shield for 4s.", "damage": 0, "effect":"+250 shield for 4s", "range": 0},
+                  "t2": [
+                    {"name":"Aura of Healing", "description": "Heals self and allies within 3m, +200 HP.", "damage": 0, "effect":"+200 HP", "range": 3}, 
+                    {"name":"Pure of Spirit", "description": "Gives debuff immunity to self and allies within 4m for 4s. Excludes interrupts.", "damage": 0, "effect":"Debuff immunity to self and allies within 4m for 4s", "range": 4}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Swift Return", "description": "Restores +20 stamina. Allows SPRINT while casting.", "damage": 0, "effect":"Restores +20 stamina", "range": 0},
+                "t2": [
+                  {"name":"Spirited Run", "description": "Gains +25% move speed for 4s", "damage": 0, "effect":"+25% move speed for 4s", "range": 0}, 
+                  {"name":"Ardent Blade", "description": "Gains +25% basic attack damage for 4s", "damage": 0, "effect":"+25% basic attack damage for 4s", "range": 0}
+                ]
+              }
+            }
+          },
+          "focus": {
+            "skillInfo":
+              {
+              "name": "Terrify",
+              "description": "Teleports SIR CADOR to target area. Launches enemies near target, 4.5m high (interrupts). Slows enemies near target, -20% move speed. Major weakens enemies near target, -50% damage. Each focus point increases: Slow and major weakness duration, 4s/6s/8s. Attack damage, 400/500/600",
+              "damage": 400,
+              "effect": "Launches enemies near target, 4.5m high (interrupts) -20% move speed -50% damage. Focus points increase Slow and major weakness duration, 4s/6s/8s. Attack damage, 400/500/600",
+              "range": 4,
+              "damageType": "Melee",
+              "cooldown": 0
+              },
+          "upgrades":{
+            "right":{
+                "t1": {"name":"Skirmishing", "description": "In combat, restores 25 stamina/s. Outside combat, starts health regen 2s earlier.", "damage": 0, "effect":"25 stamina/s outside of combat health regen 2s earlier", "range": 0},
+                "t2": [
+                  {"name":"Pure Escapism", "description": "Once every 20s, DODGE purifies debuffs.", "damage": 0, "effect":"DODGE purifies debuffs every 20s", "range": 0}, 
+                  {"name":"Hit and Run", "description": "Gains +10% move speed and +10 armor till death.", "damage": 0, "effect":"+10% move speed and +10 armor till death", "range": 0}
+                ]
+              },
+            
+              "left":{
+              "t1": {"name":"Ghostly Might", "description": "SIR CADOR gains +10% damage. With SIR CADOR in sword, basic attack deals 123 damage.", "damage": 0, "effect":"+10% damage with SIR CADOR in sword, basic attacks deals 123 damage", "range": 0},
+              "t2": [
+                {"name":"En Garde", "description": "During attack, gains +20% front damage reduction.", "damage": 0, "effect":"During attack, +20% front damage reduction", "range": 0}, 
+                {"name":"Will to Power", "description": "Gains +10% damage and +10% front damage reduction till death.", "damage": 0, "effect":"+10% damage and +10% front damage reduction till death", "range": 0}
+              ]
+            }
+          }
+        },
+        "talents": 
+          [{
+            "name":"Command Performance",
+            "ability":"Slash",
+            "description": "SIR CADOR deals +40% damage on SLASH victims.",
+            "clash": "",
+            "effect": "+40% damage on SLASH victims",
+            "range": 0
+          },
+          {
+            "name":"Echoes from Beyond",
+            "ability":["Cador's War Cry", "Sir Cador"],
+            "description": ["CLASH: Heals SIR CADOR +750 HP.", "Sir Cador roars, 4.2m radius."],
+            "clash": "",
+            "effect": ["Heals SIR CADOR +750 HP","4.2m radius"],
+            "range": 4.2
+          },
+          {
+            "name":"Total Recall",
+            "ability":"",
+            "description": "SIR CADOR deals +40% damage on SLASH victims.",
+            "clash": "",
+            "effect": "+40% damage on SLASH victims",
+            "range": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Beckett",
+      "title": "Tactical Shooter",
+      "description": "An adventurer needs quick reflexes and quicker wits. A jetpack doesn't hurt either.",
+      "role": "Ranged DPS",
+      "archetype": "Shooter",
+      "statPercentages":
+        {
+        "Offense": 12,
+        "Defense": 12,
+        "Mobility":12,
+        "Utility": 12
+        },
+      "abilities":{
+        "lmb": {
+          "skillInfo":[
+            {
+            "name": "Fire Weapon",
+            "description": "Shoots with equipped weapon. Each shot consumes ammo.",
+            "damage": null,
+            "effect": null,
+            "range": 20,
+            "damageType": "Ranged",
+            "cooldown": null
+            },
+            {
+            "name": "Machine Pistols",
+            "description": "Fires machine pistols while equipped. Holds up to 30 ammo. Deals reduced damage on long ranged shots.",
+            "damage": 30,
+            "effect": null,
+            "range": 20,
+            "damageType": "Ranged",
+            "cooldown": null
+            }
+         ],
+          "upgrades":{
+            "right":{
+                "t1": {"name":"Sharp Shooter", "description": "Fires in rapid bursts of 5 shots", "damage": null, "effect":"Bursts of 5 shots +30 range", "range": 60},
+                "t2": [
+                  {"name":"Painfully Accurate", "description": "Gains +10% crit damage", "damage": null, "effect":"+10% crit damage", "range": null}, 
+                  {"name":"Tactical Shooter", "description": "On backstab hit, deals +15% damage", "damage": null, "effect":null, "range": null}
+                ]
+              },
+              "left":{
+              "t1": {"name":"Clip Service", "description": "Machine Pistol gains more ammo. Holds up to 42 ammo", "damage": null, "effect":"+42 ammo", "range": null},
+              "t2": [
+                {"name":"Close Quarters", "description": "On hit within 10m, deals +10% damage", "damage": null, "effect":"Within 10m +10% damage", "range": null}, 
+                {"name":"AP 'em", "description": "Deals 30% armor ignoring damage", "damage": null, "effect":"+20% armor ignoring damage", "range": null}
+              ]
+            }
+          }
+        },
+          "rmb": {
+            "skillInfo":
+              {
+              "name": "Grenade",
+              "description": "Thows a grenade, causing a 4m radious explosion.",
+              "damage": 325,
+              "effect": "4m explosion",
+              "range": 15,
+              "damageType": "Ranged",
+              "cooldown": 15
+              },
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Tear Gas", "description": "Throws a grenade that bounces 3x. On bounce, creates poison clouds for 3s. Clouds poison enemies, -50% healing and 21dmg/s for 3s. On direct hit, cancels enemy. (interrupts)", "damage": 21, "effect":"On bounce, creates poison clouds for 3s that negates -50% healing and 21dmg/s for 3s. On direct hit cancels enemy.", "range": null},
+                  "t2": [
+                    {"name":"Lingering Fumes", "description": "On bounce, creates poison clouds for 6s. On direct hit, dazes enemy for 1.5s. (interrupts)", "damage": null, "effect":"Increases poison cloud duration. On hit, dazes.", "range": null}, 
+                    {"name":"Exhaust Fumes", "description": "On JETPACK use, reduces cooldown by 10s.", "damage": null, "effect":"On JETPACK use, reduces cooldown.", "range": null}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Crack Troops", "description": "Applies cracked armor, -10 armor and 10dmg/s for 3s.", "damage": 310, "effect":"-10 armor and 10dmg/s for 3s.", "range": null},
+                "t2": [
+                  {"name":"Frag Grenade", "description": "Throws a grenade, causing a 5m radius explosion.", "damage": null, "effect":"Increases explosion area.", "range": null}, 
+                  {"name":"Smart Grenade", "description": "On direct hit, explodes instantly, dealing +100 damage.", "damage": 410, "effect":"On direct hit, explodes instantly, duffing damage.", "range": null}
+                ]
+              }
+            }
+          },
+          "q": {
+            "skillInfo":[
+              {
+              "name": "Swap Weapon",
+              "description": "Switches between MACHINE PISTOLS and CANNON.",
+              "damage": null,
+              "effect": null,
+              "range": null,
+              "damageType": null,
+              "cooldown": 3
+              },
+              {
+              "name": "Cannon",
+              "description": "Fires cannon while equipped. Holds up to 3 ammo.",
+              "damage": 235,
+              "effect": null,
+              "range": 30,
+              "damageType": "Ranged",
+              "cooldown": 3
+              }
+           ],
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Flame Cannon", "description": "Applies burn, 20dmg/s for 3s.", "damage": 20, "effect":"Reduces CANNON range and applies burn.", "range": 20},
+                  "t2": [
+                    {"name":"After Burner", "description": "Pierces through enemies.", "damage": null, "effect":"CANNON pierces through enemies.", "range": null}, 
+                    {"name":"Blast Radius", "description": "On impact, shots explode.", "damage": null, "effect":"On impact, CANNON shots explode.", "range": null}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Rocket Booster", "description": "Fast projectiles.", "damage": null, "effect":"Increases CANNON projectile speed and range.", "range": 50},
+                "t2": [
+                  {"name":"Arming Time", "description": "Increases damage up to 15% within the span of 30m.", "damage": null, "effect":"Long distance buffs CANNON damage.", "range": null}, 
+                  {"name":"Fully Loaded", "description": "After reload, next shot deals +100.", "damage": 335, "effect":"After reload, increases next CANNON damage.", "range": null}
+                ]
+              }
+            }
+          },
+          "e": {
+            "skillInfo":
+              {
+              "name": "Jetpack",
+              "description": "Files with jetpack for 4s. Can jump 1x while flying.",
+              "damage": 0,
+              "effect": "Flying 4s with 1 jump.",
+              "range": null,
+              "damageType": null,
+              "cooldown": 20
+              },
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Rocketpack", "description": "SPRINT + [E]: Starts flight with a dash.", "damage": null, "effect":"SPRINT + [E]: Starts flight with a dash.", "range": null},
+                  "t2": [
+                    {"name":"Ignition Switch", "description": "Creates a trail of fire for 2s, dealing 50 burn damage for 1s.", "damage": 50, "effect":"SPRINT + [E]: Creates a trail of fire, dealing burn damage.", "range": null}, 
+                    {"name":"Blast Away", "description": "Pushes enemies 10 away. (interrupts)", "damage": null, "effect":"SPRINT + [E]: Pushes enemies away.", "range": 10}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Fuel Capacity", "description": "[E] Flies with jetpack for 6s.", "damage": null, "effect":"Increases fly duration.", "range": null},
+                "t2": [
+                  {"name":"Up and Away", "description": "Can jump 2x while flying.", "damage": null, "effect":"Increases jump amount.", "range": null}, 
+                  {"name":"Jet Powered", "description": "FIRE WEAPON gains +15% damage while flying.", "damage": null, "effect":"Buffs FIRE WEAPON damage while flying.", "range": null}
+                ]
+              }
+            }
+          },
+          "focus": {
+            "skillInfo":
+              {
+              "name": "Air Strike",
+              "description": "Drops 3 missiles in target area. Ecah focus point increases: Missle damage, 250/325/400 per missile.",
+              "damage": 250,
+              "effect": "Focus increases missle damage 250/325/400 per missile.",
+              "range": 20,
+              "damageType": "Ranged",
+              "cooldown": null
+              },
+          "upgrades":{
+            "right":{
+                "t1": {"name":"Will to Power", "description": "Gains +10% damage and +10% front damage reduction until death.", "damage": null, "effect":"Increases damage and damage reduction.", "range": null},
+                "t2": [
+                  {"name":"Supreme Will", "description": "Gains 100% crit chance. Restores +100 stamina.", "damage": null, "effect":"Increases crit chance and restores stamina.", "range": null}, 
+                  {"name":"Refocus", "description": "Gains +25% focus gain until death. Passive: Gains +15% focus gain.", "damage": null, "effect":"Buffs focus gain more. Passive: Increases focus gain.", "range": null}
+                ]
+              },
+            
+              "left":{
+              "t1": {"name":"Precision", "description": "Gains +25% crit chance build-up.", "damage": null, "effect":"Passive: Buffs crit chance build-up.", "range": null},
+              "t2": [
+                {"name":"Tactical Awareness", "description": "Gains 10% backstab damage reduction and +10% backstab damage.", "damage": null, "effect":"Passive: Increases damage reduction and damage.", "range": null}, 
+                {"name":"En Garde", "description": "During attack, gains +20% front damage reduction.", "damage": null, "effect":"Passive: During attack, gains damage reduction.", "range": null}
+              ]
+            }
+          }
+        },
+          "talents": 
+          [{
+            "name":"Grenadier",
+            "ability":"Grenade",
+            "description": "CLASH: Reduces cooldown by 2s.",
+            "clash": "Reduces cooldown by 2s",
+            "effect": "Reduces GRENADE cooldown.",
+            "range": 15
+          },
+          {
+            "name":"Outgunned",
+            "ability":"Swap Weapon",
+            "description": "Gains +7% basic attack damage for 3s.",
+            "clash": "Gains +15% basic attack damage for 3s instead.",
+            "effect": "SWAP WEAPON buffs basic attack damage.",
+            "range": null
+          },
+          {
+            "name":"Ready to Jet",
+            "ability":"Jetpack",
+            "description": "Restores +25 stamina.", 
+            "clash": "While flying, gains +100% focus gain.",
+            "effect": "Restores +25 stamina CLASH: While flying, gains +100% focus gain",
+            "range": null
+          }
+        ]
+      }
+    },
+        {
+      "id": 2,
+      "name": "Beckett",
+      "title": "Tactical Shooter",
+      "description": "An adventurer needs quick reflexes and quicker wits. A jetpack doesn't hurt either.",
+      "role": "Ranged DPS",
+      "archetype": "Shooter",
+      "statPercentages":
+        {
+        "Offense": 12,
+        "Defense": 12,
+        "Mobility":12,
+        "Utility": 12
+        },
+      "abilities":{
+        "lmb": {
+          "skillInfo":[
+            {
+            "name": "Fire Weapon",
+            "description": "Shoots with equipped weapon. Each shot consumes ammo.",
+            "damage": null,
+            "effect": null,
+            "range": 20,
+            "damageType": "Ranged",
+            "cooldown": null
+            },
+            {
+            "name": "Machine Pistols",
+            "description": "Fires machine pistols while equipped. Holds up to 30 ammo. Deals reduced damage on long ranged shots.",
+            "damage": 30,
+            "effect": null,
+            "range": 20,
+            "damageType": "Ranged",
+            "cooldown": null
+            }
+         ],
+          "upgrades":{
+            "right":{
+                "t1": {"name":"Sharp Shooter", "description": "Fires in rapid bursts of 5 shots", "damage": null, "effect":"Bursts of 5 shots +30 range", "range": 60},
+                "t2": [
+                  {"name":"Painfully Accurate", "description": "Gains +10% crit damage", "damage": null, "effect":"+10% crit damage", "range": null}, 
+                  {"name":"Tactical Shooter", "description": "On backstab hit, deals +15% damage", "damage": null, "effect":null, "range": null}
+                ]
+              },
+              "left":{
+              "t1": {"name":"Clip Service", "description": "Machine Pistol gains more ammo. Holds up to 42 ammo", "damage": null, "effect":"+42 ammo", "range": null},
+              "t2": [
+                {"name":"Close Quarters", "description": "On hit within 10m, deals +10% damage", "damage": null, "effect":"Within 10m +10% damage", "range": null}, 
+                {"name":"AP 'em", "description": "Deals 30% armor ignoring damage", "damage": null, "effect":"+20% armor ignoring damage", "range": null}
+              ]
+            }
+          }
+        },
+          "rmb": {
+            "skillInfo":
+              {
+              "name": "Grenade",
+              "description": "Thows a grenade, causing a 4m radious explosion.",
+              "damage": 325,
+              "effect": "4m explosion",
+              "range": 15,
+              "damageType": "Ranged",
+              "cooldown": 15
+              },
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Tear Gas", "description": "Throws a grenade that bounces 3x. On bounce, creates poison clouds for 3s. Clouds poison enemies, -50% healing and 21dmg/s for 3s. On direct hit, cancels enemy. (interrupts)", "damage": 21, "effect":"On bounce, creates poison clouds for 3s that negates -50% healing and 21dmg/s for 3s. On direct hit cancels enemy.", "range": null},
+                  "t2": [
+                    {"name":"Lingering Fumes", "description": "On bounce, creates poison clouds for 6s. On direct hit, dazes enemy for 1.5s. (interrupts)", "damage": null, "effect":"Increases poison cloud duration. On hit, dazes.", "range": null}, 
+                    {"name":"Exhaust Fumes", "description": "On JETPACK use, reduces cooldown by 10s.", "damage": null, "effect":"On JETPACK use, reduces cooldown.", "range": null}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Crack Troops", "description": "Applies cracked armor, -10 armor and 10dmg/s for 3s.", "damage": 310, "effect":"-10 armor and 10dmg/s for 3s.", "range": null},
+                "t2": [
+                  {"name":"Frag Grenade", "description": "Throws a grenade, causing a 5m radius explosion.", "damage": null, "effect":"Increases explosion area.", "range": null}, 
+                  {"name":"Smart Grenade", "description": "On direct hit, explodes instantly, dealing +100 damage.", "damage": 410, "effect":"On direct hit, explodes instantly, duffing damage.", "range": null}
+                ]
+              }
+            }
+          },
+          "q": {
+            "skillInfo":[
+              {
+              "name": "Swap Weapon",
+              "description": "Switches between MACHINE PISTOLS and CANNON.",
+              "damage": null,
+              "effect": null,
+              "range": null,
+              "damageType": null,
+              "cooldown": 3
+              },
+              {
+              "name": "Cannon",
+              "description": "Fires cannon while equipped. Holds up to 3 ammo.",
+              "damage": 235,
+              "effect": null,
+              "range": 30,
+              "damageType": "Ranged",
+              "cooldown": 3
+              }
+           ],
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Flame Cannon", "description": "Applies burn, 20dmg/s for 3s.", "damage": 20, "effect":"Reduces CANNON range and applies burn.", "range": 20},
+                  "t2": [
+                    {"name":"After Burner", "description": "Pierces through enemies.", "damage": null, "effect":"CANNON pierces through enemies.", "range": null}, 
+                    {"name":"Blast Radius", "description": "On impact, shots explode.", "damage": null, "effect":"On impact, CANNON shots explode.", "range": null}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Rocket Booster", "description": "Fast projectiles.", "damage": null, "effect":"Increases CANNON projectile speed and range.", "range": 50},
+                "t2": [
+                  {"name":"Arming Time", "description": "Increases damage up to 15% within the span of 30m.", "damage": null, "effect":"Long distance buffs CANNON damage.", "range": null}, 
+                  {"name":"Fully Loaded", "description": "After reload, next shot deals +100.", "damage": 335, "effect":"After reload, increases next CANNON damage.", "range": null}
+                ]
+              }
+            }
+          },
+          "e": {
+            "skillInfo":
+              {
+              "name": "Jetpack",
+              "description": "Files with jetpack for 4s. Can jump 1x while flying.",
+              "damage": 0,
+              "effect": "Flying 4s with 1 jump.",
+              "range": null,
+              "damageType": null,
+              "cooldown": 20
+              },
+            "upgrades":{
+              "right":{
+                  "t1": {"name":"Rocketpack", "description": "SPRINT + [E]: Starts flight with a dash.", "damage": null, "effect":"SPRINT + [E]: Starts flight with a dash.", "range": null},
+                  "t2": [
+                    {"name":"Ignition Switch", "description": "Creates a trail of fire for 2s, dealing 50 burn damage for 1s.", "damage": 50, "effect":"SPRINT + [E]: Creates a trail of fire, dealing burn damage.", "range": null}, 
+                    {"name":"Blast Away", "description": "Pushes enemies 10 away. (interrupts)", "damage": null, "effect":"SPRINT + [E]: Pushes enemies away.", "range": 10}
+                  ]
+                },
+              
+                "left":{
+                "t1": {"name":"Fuel Capacity", "description": "[E] Flies with jetpack for 6s.", "damage": null, "effect":"Increases fly duration.", "range": null},
+                "t2": [
+                  {"name":"Up and Away", "description": "Can jump 2x while flying.", "damage": null, "effect":"Increases jump amount.", "range": null}, 
+                  {"name":"Jet Powered", "description": "FIRE WEAPON gains +15% damage while flying.", "damage": null, "effect":"Buffs FIRE WEAPON damage while flying.", "range": null}
+                ]
+              }
+            }
+          },
+          "focus": {
+            "skillInfo":
+              {
+              "name": "Air Strike",
+              "description": "Drops 3 missiles in target area. Ecah focus point increases: Missle damage, 250/325/400 per missile.",
+              "damage": 250,
+              "effect": "Focus increases missle damage 250/325/400 per missile.",
+              "range": 20,
+              "damageType": "Ranged",
+              "cooldown": null
+              },
+          "upgrades":{
+            "right":{
+                "t1": {"name":"Will to Power", "description": "Gains +10% damage and +10% front damage reduction until death.", "damage": null, "effect":"Increases damage and damage reduction.", "range": null},
+                "t2": [
+                  {"name":"Supreme Will", "description": "Gains 100% crit chance. Restores +100 stamina.", "damage": null, "effect":"Increases crit chance and restores stamina.", "range": null}, 
+                  {"name":"Refocus", "description": "Gains +25% focus gain until death. Passive: Gains +15% focus gain.", "damage": null, "effect":"Buffs focus gain more. Passive: Increases focus gain.", "range": null}
+                ]
+              },
+            
+              "left":{
+              "t1": {"name":"Precision", "description": "Gains +25% crit chance build-up.", "damage": null, "effect":"Passive: Buffs crit chance build-up.", "range": null},
+              "t2": [
+                {"name":"Tactical Awareness", "description": "Gains 10% backstab damage reduction and +10% backstab damage.", "damage": null, "effect":"Passive: Increases damage reduction and damage.", "range": null}, 
+                {"name":"En Garde", "description": "During attack, gains +20% front damage reduction.", "damage": null, "effect":"Passive: During attack, gains damage reduction.", "range": null}
+              ]
+            }
+          }
+        },
+          "talents": 
+          [{
+            "name":"Grenadier",
+            "ability":"Grenade",
+            "description": "CLASH: Reduces cooldown by 2s.",
+            "clash": "Reduces cooldown by 2s",
+            "effect": "Reduces GRENADE cooldown.",
+            "range": 15
+          },
+          {
+            "name":"Outgunned",
+            "ability":"Swap Weapon",
+            "description": "Gains +7% basic attack damage for 3s.",
+            "clash": "Gains +15% basic attack damage for 3s instead.",
+            "effect": "SWAP WEAPON buffs basic attack damage.",
+            "range": null
+          },
+          {
+            "name":"Ready to Jet",
+            "ability":"Jetpack",
+            "description": "Restores +25 stamina.", 
+            "clash": "While flying, gains +100% focus gain.",
+            "effect": "Restores +25 stamina CLASH: While flying, gains +100% focus gain",
+            "range": null
+          }
+        ]
+      }
+    },
+    {
+    "id": 3,
+    "name": "Charknok",
+    "title": "Fire Mage",
+    "description": "The drakkor wield fire with the skills of mages and the ferocity of monsters.",
+    "role": "Ranged DPS",
+    "archetype": "Caster", 
+    "statPercentages":
+      {
+      "Offense": 12,
+      "Defense": 12,
+      "Mobility":12,
+      "Utility": 12
+      },
+    "abilities":{
+      "lmb": {
+        "skillInfo":
+          {
+          "name": "",
+          "description": "",
+          "damage": 0,
+          "effect": "",
+          "range": 0,
+          "damageType": "",
+          "cooldown": 0
+          },
+        "upgrades":{
+          "right":{
+              "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+              "t2": [
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+              ]
+            },
+            "left":{
+            "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+            "t2": [
+              {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+              {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+            ]
+          }
+        }
+      },
+        "rmb": {
+          "skillInfo":
+            {
+            "name": "",
+            "description": "",
+            "damage": 0,
+            "effect": "",
+            "range": 0,
+            "damageType": "",
+            "cooldown": 0
+            },
+          "upgrades":{
+            "right":{
+                "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+                "t2": [
+                  {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                  {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+                ]
+              },
+            
+              "left":{
+              "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+              "t2": [
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+              ]
+            }
+          }
+        },
+        "q": {
+          "skillInfo":
+            {
+            "name": "",
+            "description": "",
+            "damage": 0,
+            "effect": "",
+            "range": 0,
+            "damageType": "",
+            "cooldown": 0
+            },
+          "upgrades":{
+            "right":{
+                "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+                "t2": [
+                  {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                  {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+                ]
+              },
+            
+              "left":{
+              "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+              "t2": [
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+              ]
+            }
+          }
+        },
+        "e": {
+          "skillInfo":
+            {
+            "name": "",
+            "description": "",
+            "damage": 0,
+            "effect": "",
+            "range": 0,
+            "damageType": "",
+            "cooldown": 0
+            },
+          "upgrades":{
+            "right":{
+                "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+                "t2": [
+                  {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                  {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+                ]
+              },
+            
+              "left":{
+              "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+              "t2": [
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+              ]
+            }
+          }
+        },
+        "focus": {
+          "skillInfo":
+            {
+            "name": "",
+            "description": "",
+            "damage": 0,
+            "effect": "",
+            "range": 0,
+            "damageType": "",
+            "cooldown": 0
+            },
+        "upgrades":{
+          "right":{
+              "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+              "t2": [
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+                {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+              ]
+            },
+          
+            "left":{
+            "t1": {"name":"", "description": "", "damage": 0, "effect":"", "range": 0},
+            "t2": [
+              {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}, 
+              {"name":"", "description": "", "damage": 0, "effect":"", "range": 0}
+            ]
+          }
+        }
+      },
+        "talents": 
+        [{
+          "name":"",
+          "ability":"",
+          "description": "",
+	  "clash": "",
+          "effect": "",
+          "range": 0
+        },
+        {
+          "name":"",
+          "ability":"",
+          "description": "",
+	  "clash": "",
+          "effect": "",
+          "range": 0
+        },
+        {
+          "name":"",
+          "ability":"",
+          "description": "",
+	  "clash": "",
+          "effect": "",
+          "range": 0
+        }
+      ]
+     }
+    }
+  ]
+}
