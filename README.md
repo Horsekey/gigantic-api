@@ -5,7 +5,7 @@ Self-hosted API to pull stats from Gigantic. The goal is to have it hosted so ot
 Road-map:
 - [ ] Scrape info into JSON file ~ in progress...
 - [ ] Create Go-based REST API
-- [ ] Dockerize it
+- [ ] Dockerize it (for funz)
 - [ ] Integrate API keys / host the API for use
 
 [Mistforge](https://mistforge.net/en-US/news) was a big inspiration for the project. I also just really enjoy the game and am happy it's come back to us. This API won't include any in-game stats (yet) and will just focus on static content found within the game client and the [gogigantic.wiki](https://gogigantic.wiki) page.
