@@ -4,7 +4,7 @@ Self-hosted API to pull stats from Gigantic. The goal is to have it hosted so ot
 
 Road-map:
 - [ ] Scrape info into JSON file ~ in progress...
-- [ ] Create Go-based REST API
+- [ ] Create Go-based REST API ~ in progress...
 - [ ] Dockerize it (for funz)
 - [ ] Integrate API keys / host the API for use
 
