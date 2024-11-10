@@ -224,8 +224,8 @@
       "name": "Beckett",
       "title": "Tactical Shooter",
       "description": "An adventurer needs quick reflexes and quicker wits. A jetpack doesn't hurt either.",
-      "role": "Ranged DPS",
-      "archetype": "Shooter",
+      "role": ["Ranged DPS"],
+      "archetype": ["Shooter"],
       "statPercentages":
         {
         "Offense": 12,
@@ -431,8 +431,8 @@
       "name": "Beckett",
       "title": "Tactical Shooter",
       "description": "An adventurer needs quick reflexes and quicker wits. A jetpack doesn't hurt either.",
-      "role": "Ranged DPS",
-      "archetype": "Shooter",
+      "role": ["Ranged DPS"],
+      "archetype": ["Shooter"],
       "statPercentages":
         {
         "Offense": 12,
@@ -638,8 +638,8 @@
     "name": "Charknok",
     "title": "Fire Mage",
     "description": "The drakkor wield fire with the skills of mages and the ferocity of monsters.",
-    "role": "Ranged DPS",
-    "archetype": "Caster", 
+    "role": ["Ranged DPS"],
+    "archetype": ["Caster"], 
     "statPercentages":
       {
       "Offense": 12,

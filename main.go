@@ -1,62 +1,95 @@
 package main
 
 import (
-		"net/http"
-		"encoding/json"
-		"fmt"
-		"log"
-		"github.com/gorilla/mux"
+	"encoding/json"
+	"fmt"
+	"log"
+	"net/http"
+	"os"
+	"strconv"
+	"strings"
+
+	"github.com/gorilla/mux"
 )
 
-	type Test struct {
-		Heroes []struct {
-			ID              int      `json:"id"`
-			Name            string   `json:"name"`
-			Title           string   `json:"title"`
-			Description     string   `json:"description"`
-			Role            []string `json:"role"`
-			Archetype       []string `json:"archetype"`
-		}
+type Hero struct {
+	Heroes []struct {
+		ID          int      `json:"id"`
+		Name        string   `json:"name"`
+		Title       string   `json:"title"`
+		Description string   `json:"description"`
+		Role        []string `json:"role"`
+		Archetype   []string `json:"archetype"`
 	}
-
-// Init heroes var as a slice of Hero 
-var heroes Test
-
-func getheroes(w http.ResponseWriter, r *http.Request) {
-	fmt.Printf("%v", heroes)
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(heroes)
 }
 
-/*func getHeroByName(w http.ResponseWriter, r *http.Request) {
+// Init heroes var as a slice of Hero
+var hero Hero
+
+func getHeroes(w http.ResponseWriter, r *http.Request) {
+	fmt.Printf("%v", hero)
 	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(hero)
+}
+
+func getHeroByName(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
-	for _, item := range heroes {
-		if item.ID == params["id"] {
-			json.NewEncoder(w).Encode(item)
+	for _, hero := range hero.Heroes {
+
+		fmt.Println(hero.Name)
+		fmt.Println(params["name"])
+
+		if strings.EqualFold(hero.Name, params["name"]) {
+			w.Header().Set("Content-Type", "application/json")
+
+			err := json.NewEncoder(w).Encode(hero)
+			if err != nil {
+				http.Error(w, "Failed to encode hero", http.StatusInternalServerError)
+			}
 			return
 		}
 	}
-}*/
+}
+
+func getHeroById(w http.ResponseWriter, r *http.Request) {
+	params := mux.Vars(r)
+	id, err := strconv.Atoi(params["id"])
+	if err != nil {
+		http.Error(w, "Invalid hero ID", http.StatusBadRequest)
+	}
+
+	for _, hero := range hero.Heroes {
+		if hero.ID == id {
+			w.Header().Set("Content-Type", "application/json")
+
+			err := json.NewEncoder(w).Encode(hero)
+			if err != nil {
+				http.Error(w, "Failed to encode hero", http.StatusInternalServerError)
+			}
+			return
+		}
+	}
+}
 
 func main() {
 
-	b := []byte(`{"heroes":[{"ID": 1, "Name": "Aising", "Description": "By taking up her father's sword, Aisling conjured more than just his memory", "Role": ["Support", "Melee DPS"], "Archetype": ["Summoner", "Utility"]},{"ID": 2, "Name": "Beckett", "Description": "An adventurer needs quick reflexes and quicker wits. A jetpack doesn't hurt either.", "Role": ["Ranged DPS"], "Archetype": ["Shooter"]}]}`)
-
-	err := json.Unmarshal(b, &heroes)
-	
+	fileContent, err := os.ReadFile("gigantic-json.json")
 	if err != nil {
-		fmt.Printf("can't Unmarshal due to %s", err)
+		log.Fatal(err)
 	}
 
-	fmt.Println(heroes)
+	err = json.Unmarshal(fileContent, &hero)
+	if err != nil {
+		log.Fatal(err)
+	}
 
+	//fmt.Println(hero)
 	router := mux.NewRouter()
 
 	// get hero information based on name or id
-	router.HandleFunc("/heroes", getheroes).Methods("GET")
-	//router.HandleFunc("/heroes/{name}", getHeroByName).Methods("GET")
-	//router.HandleFunc("/heroes/{id}", getHeroById).Methods("GET")
-	
+	router.HandleFunc("/heroes", getHeroes).Methods("GET")
+	router.HandleFunc("/heroes/{name:[a-zA-Z]+}", getHeroByName).Methods("GET")
+	router.HandleFunc("/heroes/{id:[0-9]+}", getHeroById).Methods("GET")
+
 	log.Fatal(http.ListenAndServe(":5000", router))
 }
